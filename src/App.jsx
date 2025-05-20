@@ -1,5 +1,17 @@
+import { Home } from "./Components/Home"
+import { UserInfo } from "./Components/UserInfo.jsx"
+import { UserSettings } from "./Components/UserSettings.jsx"
+
+ 
+
 export const App = () => {
   return (
-    <h1>React Boilerplate</h1>
+    <>    
+    <Home />
+    
+    <UserInfo />
+    <UserSettings />
+    </>
+    
   )
 }
