@@ -4,27 +4,40 @@ import { Media } from "./Media";
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;   
-    align-items: center;    
+    align-items: center;
+    
+    
   }
 
   body {
-    //font-family: "Indie Flower", cursive;
-    //font-family: "Rubik Dirt", system-ui;
-    //font-family: "Mystery Quest", system-ui;
-    //font-family: "Creepster", system-ui;
-    
-    font-family: "Courier Prime", monospace; //MABY!! multiple ones
-    //font-family: "Cutive Mono", monospace; //MABY!!
-    //font-family: "Source Code Pro", monospace; //MABY!!
-    //font-family: "IBM Plex Mono", monospace;//MABY!!
-    background-color: #F4F4F4;
-    color: #434040;
+    /*font-family: "Indie Flower", cursive;
+    font-family: "Rubik Dirt", system-ui;
+    font-family: "Mystery Quest", system-ui;
+    font-family: "Creepster", system-ui;*/
+    /* MABY!! multiple ones  */
+    font-family: "Courier Prime", monospace; 
+    /*font-family: "Cutive Mono", monospace; //MABY!!
+    font-family: "Source Code Pro", monospace; //MABY!!
+    font-family: "IBM Plex Mono", monospace;//MABY!!*/
+    /* background-color: #F4F4F4;
+    color: #434040; */
     display: flex;    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center; 
+    transition: background 0.3s ease, color 0.3s ease; 
       
+  }
+
+  body.light {
+    background: yellow;
+    color: black;
+  }
+
+  body.dark {
+    background: grey;
+    color: black;
   }
 
   H1 {
@@ -34,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
   H1, H2, Body {
     margin: 0;
     padding: 0;
+
   } 
 
   section {
@@ -61,6 +75,10 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;    
   }
 
+
+
   
 `
+
+
 ;
