@@ -15,6 +15,7 @@ export const AddTask = () => {
         </label>
       </form>
       
+      <p>Task {addTask}</p>
 
     </section>
   )
