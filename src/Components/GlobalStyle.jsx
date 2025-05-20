@@ -75,6 +75,41 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;    
   }
 
+  footer{ 
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: left;
+    font-size: 16px;  
+    background-color: grey; 
+    left: 0px;
+    bottom: 0px; 
+    right: 0px;
+    margin-bottom: 0px;   
+    border: 1px solid #000;    
+    width: 250px;
+    height: 50px;
+    margin: 28px auto; 
+    padding: 12px 18px;
+    gap: 12px;
+    transition: ease 1s; 
+
+    @media (min-width: 640px) {
+      width: 350px;    
+    }
+
+    img {
+      background-color: black;      
+      border-radius: 50%;   
+    }
+
+    img:hover {  
+      transform: scale(1.1);
+    }
+}
+
+
+
 
 
   

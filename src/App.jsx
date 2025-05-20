@@ -1,8 +1,9 @@
-import { Home } from "./Components/Home";
-import { Tasks } from "./Components/Tasks";
-import { AddTask } from "./Components/AddTask";
-import { GlobalStyle } from "./Components/GlobalStyle";
-import { ThemeSwitch } from "./Components/ThemeSwitch"
+import { Home } from "./components/Home";
+import { Tasks } from "./components/Tasks";
+import { AddTask } from "./components/AddTask";
+import { GlobalStyle } from "./components/GlobalStyle";
+import { ThemeSwitch } from "./components/ThemeSwitch";
+import { Footer } from "./components/Footer";
  
 
 export const App = () => {
@@ -13,6 +14,7 @@ export const App = () => {
     <Home />
     <AddTask/>
     <Tasks/>
+    <Footer />
 
       
     </>
