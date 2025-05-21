@@ -1,10 +1,16 @@
+import { appContentStore } from "../stores/appContentStore"
+
 export const Footer = () => {
+  const {appContent} = appContentStore()
+  
+
   return(
     <footer>
-      <p>Created by Sofia</p>
-      <a href="https://github.com/solen80a/js-project-happy-thoughts">
-        <img src="./assets/Btn - github.svg" alt="Github icon to access the code" target="_blank" />
-      </a>
+      <p>{appContent.footer}</p> 
+      <a href={appContent.githubLink}>
+        <img src={appContent.githubImg} alt={appContent.githubImgAlt} 
+        target="_blank" />
+      </a> 
     </footer>
   )
 }
