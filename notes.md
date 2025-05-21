@@ -12,10 +12,10 @@ Planning Tasks
 [] Design the structure of the Zustand store
 
 Core Development Tasks
-[] Set up Zustand store
+[x] Set up Zustand store
 [] Create global state with task list
 [] Define actions: addTask, removeTask, toggleTaskCompletion
-[] Build base components
+[x] Build base components
 [] Task List
 [] Task Item
 [] Add Task Form
@@ -42,7 +42,7 @@ Stretch Goals (Optional but Recommended)
 [] Add task creation timestamps
 [] Format and display timestamps (use date-fns or Moment.js)
 [] Add "Complete All" button
-[] Implement dark/light mode toggle !!See the Thuesday practice starter-code!!
+[x] Implement dark/light mode toggle !!See the Thuesday practice starter-code!!
 [] Use localStorage for persistence
 [] Add due date input for tasks
 [] Display due date
