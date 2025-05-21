@@ -3,7 +3,7 @@ import { TaskStore } from "../stores/taskStore";
 
 
 export const Tasks = () => {
-  const { isDone, tasks, toggleDone, setTask } = TaskStore();  
+  const { isDone, tasks, toggleDone, setTask, removeTasks,  } = TaskStore();  
 
   const [newTask, setNewTask] = useState("");
 
@@ -21,6 +21,8 @@ export const Tasks = () => {
       alert("Please add some text before clicking submit")
     }
   } 
+
+  //const removeTasks = TaskStore(state => state.removeTasks);
 
   return(
     <>    
@@ -40,11 +42,14 @@ export const Tasks = () => {
     
     <section>
       <div>        
-        {tasks.map((newtasks, index) => (
-          <article key={index}>Task {index + 1}: {newtasks}
+        {tasks.map((task, index) => (
+          <article key={task.id}>
+          <p>Task {index + 1}: {task.message}</p>            
           <button onClick={toggleDone}>Done?</button>
           <label>Done?<input type="checkbox" onChange={toggleDone} /></label>
           <p>Done? {isDone ? "Yes":"No"} </p> 
+          <button onClick={() => removeTasks(task.id)}>Remove task</button>
+          
           </article>
         ))} 
       </div>          

@@ -6,26 +6,29 @@ Learning & Preparation
 [x] Attend/prepare for Tuesday’s live session
 
 Planning Tasks
-[] Sketch app UI and layout
-[] Break UI into reusable components
-[] Define the data structure for a task (e.g., id, text, isCompleted, createdAt, dueDate, category, etc.)
-[] Design the structure of the Zustand store
+[x] Sketch app UI and layout
+[x] Break UI into reusable components
+[x] Define the data structure for a task (e.g., id, text, isCompleted, createdAt, dueDate, category, etc.)
+[x] Design the structure of the Zustand store
 
 Core Development Tasks
 [x] Set up Zustand store
-[] Create global state with task list
-[] Define actions: addTask, removeTask, toggleTaskCompletion
+[x] Create global state with task list
+[] Define actions: 
+  [x] addTask, 
+  [] removeTask, 
+  [] toggleTaskCompletion
 [x] Build base components
-[] Task List
-[] Task Item
-[] Add Task Form
+[x] Task List
+[x] Task Item
+[x] Add Task Form
 [] Task Counter
 [] Implement core features
-[] Add new tasks
-[] Display all tasks (completed and uncompleted)
-[] Toggle task completion status
-[] Remove tasks
-[] Show count of tasks (total or uncompleted)
+  [x] Add new tasks
+  [x] Display all tasks (completed and uncompleted)
+  [] Toggle task completion status
+  [] Remove tasks
+  [] Show count of tasks (total or uncompleted)
 
 UI/UX Tasks
 [] Style the app (clean and simple design)
