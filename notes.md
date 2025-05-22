@@ -1,3 +1,5 @@
+https://coolors.co/palette/000000-14213d-fca311-e5e5e5-ffffff
+
 Learning & Preparation
 [x] Review useContext API in React
 [x] Review Zustand state management library
@@ -16,7 +18,7 @@ Core Development Tasks
 [x] Create global state with task list
 [] Define actions: 
   [x] addTask, 
-  [] removeTask, 
+  [x] removeTask, 
   [] toggleTaskCompletion
 [x] Build base components
 [x] Task List
@@ -27,7 +29,7 @@ Core Development Tasks
   [x] Add new tasks
   [x] Display all tasks (completed and uncompleted)
   [] Toggle task completion status
-  [] Remove tasks
+  [x] Remove tasks
   [] Show count of tasks (total or uncompleted)
 
 UI/UX Tasks

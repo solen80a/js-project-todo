@@ -25,30 +25,41 @@ export const Tasks = () => {
   //const removeTasks = TaskStore(state => state.removeTasks);
 
   return(
-    <>    
-    <article>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <label>
-          <textarea
-            value={newTask} 
-            onChange={handleNewTask}
-            />
-        </label>
-        <button type="submit">Add a new task</button>
-        </form>
-      </div>
-    </article>
-    
+    <> 
     <section>
-      <div>        
-        {tasks.map((task, index) => (
+      <article>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <label>
+            <input className="submit"
+              type="text"
+              value={newTask} 
+              onChange={handleNewTask}
+              />
+          </label>
+          <button type="submit">+</button>
+          </form>
+        </div>
+      </article>
+          
+    
+    
+      <div>
+             
+        {tasks
+        .filter((task) => !isDone || !task.done)
+        .map((task, index) => (
           <article key={task.id}>
           <p>Task {index + 1}: {task.message}</p>            
-          <button onClick={toggleDone}>Done?</button>
+          
+          <button onClick={toggleDone}>
+            {task.done ? "–" : "✓"}
+          </button>
+
+
           <label>Done?<input type="checkbox" onChange={toggleDone} /></label>
           <p>Done? {isDone ? "Yes":"No"} </p> 
-          <button onClick={() => removeTasks(task.id)}>Remove task</button>
+          <button onClick={() => removeTasks(task.id)}>×</button>
           
           </article>
         ))} 

@@ -3,7 +3,7 @@ import { create } from "zustand";
 export const appContentStore = create (() => ({
 
 appContent: {
-  heading: "Yours ToDo ☠️",
+  heading: "My Day...",
   footer: "Created by Sofia Lennbom",
   githubLink: "https://github.com/solen80a/js-project-happy-thoughts",
   githubImg: "./assets/Btn - github.svg",

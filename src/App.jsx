@@ -3,17 +3,21 @@ import { Tasks } from "./components/Tasks";
 import { GlobalStyle } from "./components/styledComponents/GlobalStyle";
 import { ThemeSwitch } from "./components/ThemeSwitch";
 import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
  
 
 export const App = () => {
   return (
-    <>  
+    <> 
+    
     <GlobalStyle /> 
-    <ThemeSwitch />  
+    <Header />
+      
     <Home />
-    {/* <AddTask/> */}
     <Tasks/>
     <Footer />
+     
+    
 
       
     </>

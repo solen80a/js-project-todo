@@ -17,22 +17,23 @@ export const ThemeSwitch = () => {
   useEffect(() => {
     document.body.classList.remove("light", "dark");
     document.body.classList.add(isLightTheme ? "light" : "dark");
+    
   }, [isLightTheme]);
 
   return (
-    <section>
+    <>
       
       <form>
-      <label htmlFor="theme">Choose a theme</label>
+      <label htmlFor="theme"></label>
         <select id="theme" name="theme" onChange={handleChange} >
-          <option value="dark">Dark</option> 
-          <option value="light">Light</option>                
+          <option value="dark">DarkTheme</option> 
+          <option value="light">LightTheme</option>                
         </select>    
       </form>
       
-      <button onClick={setLightTheme}>Light Theme</button>
-      <button onClick={setDarkTheme}>Dark Theme</button>
+      {/* <button onClick={setLightTheme}>Light Theme</button>
+      <button onClick={setDarkTheme}>Dark Theme</button> */}
 
-    </section>
+    </>
   )
 }
