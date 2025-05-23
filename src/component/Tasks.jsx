@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { TaskStore } from "../stores/taskStore";
 import styled from "styled-components";
+import { Player } from "@lottiefiles/react-lottie-player";
+import animationData from "../../public/assets/Animation.json";
 
 const TaskButtons = styled.div`
   position: absolute; 
@@ -36,6 +38,9 @@ export const Tasks = () => {
     }
   } 
 
+  // Check if all tasks are marked as done
+  const allTasksDone = tasks.length > 0 && tasks.every((task) => task.isDone);
+
   return(
     <> 
     <section>
@@ -56,6 +61,16 @@ export const Tasks = () => {
           </form>
           </div>
       </article> 
+
+       {/* Show Lottie animation when all tasks are done */}
+    {allTasksDone && (
+      <Player
+        autoplay
+        loop
+        src={animationData}
+        style={{ width: "300px", height: "300px" }}
+      />
+    )}    
     
       <TaskList>             
         {tasks
@@ -86,7 +101,7 @@ export const Tasks = () => {
               </div>
             </article>
         ))} 
-      </TaskList>          
+      </TaskList> 
     </section>    
     </>  
   )
