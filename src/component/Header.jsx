@@ -1,4 +1,4 @@
-import { TaskStore } from "../stores/taskStore";
+import { TaskStore } from "../stores/useTaskStore";
 import { ThemeSwitch } from "./ThemeSwitch";
 import { appContentStore } from "../stores/appContentStore";
 import styled from "styled-components";
