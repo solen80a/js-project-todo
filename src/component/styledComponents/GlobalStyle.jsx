@@ -184,8 +184,7 @@ button:active {
   transform: rotate(var(--rotation));
   margin: 20px auto;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  position: relative; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;  
   padding-bottom: 40px; /* Creates space for buttons */
 }
 
