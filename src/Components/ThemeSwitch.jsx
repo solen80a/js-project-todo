@@ -1,39 +1,23 @@
-import { useThemeStore } from "../stores/useThemeStore"
-import { useEffect } from "react";
+import { useThemeStore } from "../stores/useThemeStore" 
 
 export const ThemeSwitch = () => {
 
   const { setLightTheme, setDarkTheme, isLightTheme } = useThemeStore()
 
-  const handleChange = (e) => {
-    const selectedTheme = e.target.value;
-    if (selectedTheme === 'light') {
-      setLightTheme();
-    } else {
-      setDarkTheme();
-    }
-  };
 
-  useEffect(() => {
-    document.body.classList.remove("light", "dark");
-    document.body.classList.add(isLightTheme ? "light" : "dark");
-    
-  }, [isLightTheme]);
+  const toggleTheme = () => {
+    if (isLightTheme) {
+      setDarkTheme();
+    } else {
+      setLightTheme();
+    }
+  };  
 
   return (
-    <>
-      
-      <form>
-      <label htmlFor="theme"></label>
-        <select id="theme" name="theme" onChange={handleChange} >
-          <option value="dark">DarkTheme</option> 
-          <option value="light">LightTheme</option>                
-        </select>    
-      </form>
-      
-      {/* <button onClick={setLightTheme}>Light Theme</button>
-      <button onClick={setDarkTheme}>Dark Theme</button> */}
-
+    <>     
+      <button onClick={() => toggleTheme("dark")}>
+        {isLightTheme ? "Dark" : "Light"}
+      </button>  
     </>
   )
 }

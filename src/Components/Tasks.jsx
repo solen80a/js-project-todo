@@ -3,7 +3,7 @@ import { TaskStore } from "../stores/taskStore";
 
 
 export const Tasks = () => {
-  const { isDone, tasks, toggleDone, setTask, removeTasks,  } = TaskStore();  
+  const { showDone, tasks, toggleDone, setTask, removeTasks,  } = TaskStore();  
 
   const [newTask, setNewTask] = useState("");
 
@@ -26,11 +26,11 @@ export const Tasks = () => {
   return(
     <> 
     <section>
-      <article>
+      <article className="stickyNote">
         <div>
           <form onSubmit={handleSubmit}>
             <label>
-            <input className="submit"
+            <input
               type="text"
               value={newTask} 
               onChange={handleNewTask}
@@ -38,15 +38,16 @@ export const Tasks = () => {
           </label>
           <button type="submit">+</button>
           </form>
-        </div>
+          </div>
       </article> 
     
       <div>             
         {tasks
-        .filter((task) => !isDone || !task.done)
+        .filter((task) => showDone || !task.isDone)
         .map((task, index) => (
-          <article key={task.id}>
-          <p>Task {index + 1}: {task.message}</p> 
+          <article className="stickyNote" key={task.id}>
+            <div>
+              <p>Task {index + 1}: {task.message}</p> 
 
           <button onClick={() => removeTasks(task.id)}>×
           </button>           
@@ -55,7 +56,10 @@ export const Tasks = () => {
             {task.isDone ? "–" : "✓"}
           </button>        
 
-          <p>Done? {task.isDone ? "Yes":"No"} </p> 
+          {/* <p>Done? {task.isDone ? "Yes":"No"} </p>  */}
+
+            </div>
+          
 
           </article>
         ))} 

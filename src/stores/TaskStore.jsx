@@ -5,16 +5,7 @@ export const TaskStore = create((set) => ({
     {id: 1, message:"Have fun 🥳", isDone: false}
   ],
   taskCount: 0,
-  
-
-  
-
-  // hideDoneTask: (idToHide) =>
-  // set((state) => ({
-  //   tasks: state.tasks.map((task) =>
-  //     task.id === idToHide ? { ...task, isdone: true } : task
-  //   )
-  // })),
+  showDone: true,
 
   setTask: (newTask) =>
   set((state) => ({
@@ -33,10 +24,8 @@ export const TaskStore = create((set) => ({
     ),
   })),
 
-  countTasks: () =>
-    set((state) => ({
-      taskCount: state.tasks.length
-    })),
+  toggleShowDone: () =>
+    set((state) => ({ showDone: !state.showDone })),
 
 }));
 
