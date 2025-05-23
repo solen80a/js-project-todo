@@ -1,9 +1,9 @@
-import { Home } from "./components/Home";
-import { Tasks } from "./components/Tasks";
-import { GlobalStyle } from "./components/styledComponents/GlobalStyle";
-import { ThemeSwitch } from "./components/ThemeSwitch";
-import { Footer } from "./components/Footer";
-import { Header } from "./components/Header";
+import { Home } from "./component/Home";
+import { Tasks } from "./component/Tasks";
+import { GlobalStyle } from "./component/styledComponents/GlobalStyle";
+import { ThemeSwitch } from "./component/ThemeSwitch";
+import { Footer } from "./component/Footer";
+import { Header } from "./component/Header";
 import { useEffect } from "react";
 import { useThemeStore } from "./stores/useThemeStore"
  

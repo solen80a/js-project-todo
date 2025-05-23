@@ -6,7 +6,6 @@ export const Footer = () => {
 
   return(
     <footer>
-      
       <a href={appContent.githubLink}>
         <img src={appContent.githubImg} alt={appContent.githubImgAlt} 
         target="_blank" />

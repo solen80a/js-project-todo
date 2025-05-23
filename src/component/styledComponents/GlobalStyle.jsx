@@ -4,13 +4,9 @@ import { Media } from "./Media";
 export const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;   
-    align-items: center;
-    
+    align-items: center;  
     
   }
-
- 
-
   header {
     background-color: #E5E5E5; 
     text-align: center;
@@ -38,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Courier Prime", monospace;    
     display: flex;    
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center; 
@@ -67,14 +64,14 @@ export const GlobalStyle = createGlobalStyle`
   body.light .stickyNote {    
     color:#000;
     background: #E5E5E5;
-    box-shadow: 5px 5px 7px #000(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(51, 51, 51, 1);
     
   }
 
   body.dark .stickyNote {   
     color:#000;
     background: #FCA311;
-    box-shadow: 5px 5px 7px #E5E5E5(33,33,33,.7);
+    box-shadow: 0 4px 10px rgba(252, 163, 17, 0.5);
     
   }
 
@@ -115,7 +112,7 @@ export const GlobalStyle = createGlobalStyle`
     
     /* Desktop Widescreen */
     @media ${Media.desktop}{ 
-      
+      flex-direction: column;
       width: 500px;
       
     }
@@ -124,6 +121,7 @@ export const GlobalStyle = createGlobalStyle`
   div {
     display: flex;
     flex-direction: column;
+  
     justify-content: center;
     align-items: center; 
     padding: 10px;  
@@ -131,13 +129,15 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   label {
-    display: flex;    
+    display: flex;
+    flex-wrap: wrap;    
     justify-content: center;
     align-items: center;
   } 
 
   footer{ 
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
     align-items: center;
     justify-content: left;
@@ -170,11 +170,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 }
 
-
 button {
   font-family: "Courier Prime", monospace; 
   position: relative;
   display: flex;
+ 
   align-items: center;
   justify-content: center;
   width: 25px;
@@ -188,9 +188,7 @@ button {
   border: none;
   padding: 8px 12px;
   margin-right: 5px;
-  cursor: pointer;
-  /* box-shadow: 12px 12px 16px 0 #E5E5E5, -12px -12px 16px 0 #E5E5E5, inset 0 0 0 0 transparent; */
-  /* transition: box-shadow 200ms, transform 300ms cubic-bezier(.2,2,1,1); */
+  cursor: pointer;  
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
@@ -205,16 +203,17 @@ button:active {
   transform: scale(.9);
 }
 
-.stickyNote {
-  width: 128px;
-  height: 128px;
+.stickyNote { 
+  width: 200px;
+  height: 200px;
   background: #FCA311;
   color: #000;
-  border: 2px solid #333; /* New darker burnt orange border */
+  border: 2px solid #333; 
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
   padding: 20px;
   font-family: "Courier Prime", monospace; 
-  transform: rotate(-2deg);
+  /* transform: rotate(-2deg); */
+  transform: rotate(var(--rotation));
   margin: 20px auto;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
@@ -236,47 +235,5 @@ button:active {
   padding: 8px 0;
   margin-bottom: 10px;
 }
-
-/* .stickyNote form button {
-  background: #000;         
-  color: #fff;              
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1em;
-  transition: background 0.3s ease, transform 0.3s ease;
-  border-radius: 0;         
-}
-
-.stickyNote form button:hover {
-  background: #333;         
-  transform: scale(1.05);
-} */
-
-/*
-.stickyNote button {
-  background: #000;          Black background 
-  color: #fff;               White text 
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1em;
-  transition: background 0.3s ease, transform 0.3s ease;
-  margin-right: 5px;
-  border-radius: 0;         Sharp corners 
-}
-*/
-
-/* .stickyNote 
-/*button:hover {
-  background: #333;          Dark gray on hover 
-  transform: scale(1.05);
-} */
-
   
-`
-
-
-;
+`;

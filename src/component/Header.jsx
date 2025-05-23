@@ -10,13 +10,13 @@ const HeadingSelection = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   padding: 10px;
   gap: 35px;
 
   /* Desktop Widescreen */
   @media ${Media.desktop}{
-    justify-content: flex-end;
+    
     
   }
 `
@@ -50,7 +50,7 @@ const { toggleShowDone, showDone } = TaskStore();
 const taskCount = TaskStore((state) => state.tasks.length);
 const notDoneCount = TaskStore((state) =>
   state.tasks.filter((task) => !task.isDone).length
-);
+  );
 
 
   return(
@@ -65,12 +65,10 @@ const notDoneCount = TaskStore((state) =>
         </HeaderSelectionCount>
         <HeaderSelectionToggle>
           <button onClick={toggleShowDone}>
-            {showDone ? "Done" : "All"}
+            {showDone ? "Left" : "All"}
           </button>
           <ThemeSwitch /> 
-        </HeaderSelectionToggle>
-        
-        
+        </HeaderSelectionToggle>  
       </HeadingSelection>
       
       
