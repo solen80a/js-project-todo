@@ -18,6 +18,13 @@ const TaskList = styled.div`
   flex-wrap: wrap;      
   gap: 20px;  
 `
+const AllTasksDone = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+`
+
 export const Tasks = () => {
   const { showDone, tasks, toggleDone, setTask, removeTasks,  } = TaskStore();  
 
@@ -64,12 +71,15 @@ export const Tasks = () => {
 
        {/* Show Lottie animation when all tasks are done */}
     {allTasksDone && (
+      <div>
+      <p className="allDone">Good Job, All Done!</p>
       <Player
         autoplay
         loop
         src={animationData}
-        style={{ width: "300px", height: "300px" }}
+        style={{ width: "300px", height: "300px", }}
       />
+       </div>
     )}    
     
       <TaskList>             

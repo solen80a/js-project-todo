@@ -36,6 +36,10 @@ export const GlobalStyle = createGlobalStyle`
     color: #000;
   }
 
+   body.dark .allDone{    
+    color: #f5f5f5;
+  }
+
   body.light button{
     background: #FCA311;
     color: #000;    
@@ -96,12 +100,9 @@ export const GlobalStyle = createGlobalStyle`
 
   div {
     display: flex;
-    flex-direction: column;
-  
+    flex-direction: column;  
     justify-content: center;
     align-items: center; 
-     
-    
   }
 
   label {
