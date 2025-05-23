@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TaskStore } from "../stores/taskStore";
+import { TaskStore } from "../stores/useTaskStore";
 import styled from "styled-components";
 import { Player } from "@lottiefiles/react-lottie-player";
 import animationData from "../../public/assets/Animation.json";
