@@ -3,7 +3,6 @@ import { appContentStore } from "../stores/appContentStore"
 export const Footer = () => {
   const {appContent} = appContentStore()
   
-
   return(
     <footer>
       <a href={appContent.githubLink}>

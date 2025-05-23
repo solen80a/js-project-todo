@@ -2,8 +2,6 @@ import { TaskStore } from "../stores/taskStore";
 import { ThemeSwitch } from "./ThemeSwitch";
 import { appContentStore } from "../stores/appContentStore";
 import styled from "styled-components";
-import { Media } from "./styledComponents/Media";
-//import { useEffect } from "react";
 
 const HeadingSelection = styled.div`
   display: flex;
@@ -13,12 +11,6 @@ const HeadingSelection = styled.div`
   justify-content: center;
   padding: 10px;
   gap: 35px;
-
-  /* Desktop Widescreen */
-  @media ${Media.desktop}{
-    
-    
-  }
 `
 const HeaderSelectionCount = styled.div `
   display: flex;
@@ -26,7 +18,6 @@ const HeaderSelectionCount = styled.div `
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
 `
 
 const HeaderSelectionToggle = styled.div `
@@ -52,9 +43,7 @@ const notDoneCount = TaskStore((state) =>
   state.tasks.filter((task) => !task.isDone).length
   );
 
-
   return(
-
     <>
     <header>
       <h1>{appContent.heading}</h1>
@@ -70,10 +59,7 @@ const notDoneCount = TaskStore((state) =>
           <ThemeSwitch /> 
         </HeaderSelectionToggle>  
       </HeadingSelection>
-      
-      
     </header> 
-      
     </>
   )
 }

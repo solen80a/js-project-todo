@@ -1,7 +1,5 @@
-import { Home } from "./component/Home";
 import { Tasks } from "./component/Tasks";
 import { GlobalStyle } from "./component/styledComponents/GlobalStyle";
-import { ThemeSwitch } from "./component/ThemeSwitch";
 import { Footer } from "./component/Footer";
 import { Header } from "./component/Header";
 import { useEffect } from "react";
@@ -19,18 +17,10 @@ export const App = () => {
 
   return (
     <> 
-    
     <GlobalStyle /> 
-    <Header />
-      
-    <Home />
+    <Header />    
     <Tasks/>
     <Footer />
-     
-    
-
-      
     </>
-    
   )
 }

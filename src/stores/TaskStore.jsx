@@ -1,9 +1,7 @@
 import { create } from "zustand";
 
 export const TaskStore = create((set) => ({
-  tasks: [
-    {id: 1, message:"Have fun 🥳", isDone: false}
-  ],
+  tasks: [],
   taskCount: 0,
   showDone: true,
 

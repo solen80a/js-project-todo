@@ -1,32 +1,21 @@
 import { useState } from "react";
 import { TaskStore } from "../stores/taskStore";
 import styled from "styled-components";
-import { Media } from "./styledComponents/Media";
 
 const TaskButtons = styled.div`
+  position: absolute; 
+  bottom: 10px; /* Adjust spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
   flex-direction: row;
+  gap: 10px; /* Space between buttons */
 `
-const TaskList = styled.div`
-      
-      flex-direction: row;
-      flex-wrap: wrap;
-      
-      gap: 20px;     
-
-/* Desktop Widescreen */
-    /* @media ${Media.desktop}{ 
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;      
-    }
-   */
-
+const TaskList = styled.div`      
+  flex-direction: row;
+  flex-wrap: wrap;      
+  gap: 20px;  
 `
-
-
-
-
 export const Tasks = () => {
   const { showDone, tasks, toggleDone, setTask, removeTasks,  } = TaskStore();  
 
@@ -46,7 +35,6 @@ export const Tasks = () => {
       alert("Please add some text before clicking submit")
     }
   } 
- 
 
   return(
     <> 
@@ -61,10 +49,9 @@ export const Tasks = () => {
               onChange={handleNewTask}
               />
           </label>
-          <div>
+          <TaskButtons>
             <button type="submit">+</button>
-            
-          </div>
+          </TaskButtons>
           </form>
           </div>
       </article> 
@@ -95,12 +82,8 @@ export const Tasks = () => {
                     
                   </div>         
                 </TaskButtons>
-
-            {/* <p>Done? {task.isDone ? "Yes":"No"} </p>  */}
               </div>
             </article>
-         
-          
         ))} 
       </TaskList>          
     </section>    

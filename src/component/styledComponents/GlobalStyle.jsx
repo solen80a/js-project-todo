@@ -13,21 +13,6 @@ export const GlobalStyle = createGlobalStyle`
     height: 200px;
     width: 100vw;
     padding: 10px;
-
-    /* Desktop Tablet */
-    @media ${Media.tablet}{ 
-      
-      
-      
-    }
-    
-    /* Desktop Widescreen */
-    @media ${Media.desktop}{ 
-      
-      
-      
-    }
-
   }
 
   body {
@@ -39,7 +24,6 @@ export const GlobalStyle = createGlobalStyle`
     align-items: center;
     text-align: center; 
     transition: background 0.3s ease, color 0.3s ease; 
-      
   }
 
   body.light {
@@ -65,14 +49,12 @@ export const GlobalStyle = createGlobalStyle`
     color:#000;
     background: #E5E5E5;
     box-shadow: 5px 5px 7px rgba(51, 51, 51, 1);
-    
   }
 
   body.dark .stickyNote {   
     color:#000;
     background: #FCA311;
     box-shadow: 0 4px 10px rgba(252, 163, 17, 0.5);
-    
   }
 
   body.light section{
@@ -92,29 +74,23 @@ export const GlobalStyle = createGlobalStyle`
   h1, h2, body {
     margin: 0;
     padding: 0;
-
   } 
 
   section {
     display: flex;
     flex-wrap: wrap;
-    
     background-color: #000;    
     width: 200px;
-   
 
     /* Desktop Tablet */
     @media ${Media.tablet}{ 
-      
       width: 300px;
-      
     }
     
     /* Desktop Widescreen */
     @media ${Media.desktop}{ 
       flex-direction: column;
       width: 500px;
-      
     }
   }
 
@@ -124,7 +100,7 @@ export const GlobalStyle = createGlobalStyle`
   
     justify-content: center;
     align-items: center; 
-    padding: 10px;  
+     
     
   }
 
@@ -137,7 +113,6 @@ export const GlobalStyle = createGlobalStyle`
 
   footer{ 
     display: flex;
-    flex-wrap: wrap;
     gap: 12px;
     align-items: center;
     justify-content: left;
@@ -146,19 +121,13 @@ export const GlobalStyle = createGlobalStyle`
     left: 0px;
     bottom: 0px; 
     right: 0px;
-    margin-bottom: 0px;   
-    border: 1px solid #000;    
-    
-    height: 50px;
+    margin-bottom: 0px;     
     margin: 28px auto; 
     padding: 12px 18px;
     gap: 12px;
     transition: ease 1s;
-    width: 100vw; 
-
-    @media (min-width: 640px) {
-          
-    }
+    width: 100vw;
+    height: 200px; 
 
     img {
       background-color: black;      
@@ -174,7 +143,6 @@ button {
   font-family: "Courier Prime", monospace; 
   position: relative;
   display: flex;
- 
   align-items: center;
   justify-content: center;
   width: 25px;
@@ -211,12 +179,13 @@ button:active {
   border: 2px solid #333; 
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
   padding: 20px;
-  font-family: "Courier Prime", monospace; 
-  /* transform: rotate(-2deg); */
+  font-family: "Courier Prime", monospace;   
   transform: rotate(var(--rotation));
   margin: 20px auto;
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative; 
+  padding-bottom: 40px; /* Creates space for buttons */
 }
 
 .stickyNote:hover {
