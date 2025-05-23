@@ -45,6 +45,7 @@ export const Tasks = () => {
             <label>
             <input
               type="text"
+              aria-label="Add a todo"
               value={newTask} 
               onChange={handleNewTask}
               />
